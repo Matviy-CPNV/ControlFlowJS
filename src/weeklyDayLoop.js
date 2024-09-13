@@ -1,8 +1,13 @@
 function getDayLoop(day){
-    let days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
-    for (let i = days.length - 1; i > 8; i++) {
-
+    let days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+    for (let i = 0; i < days.length; i++) {
+        if (i === day) {
+            return days[i];
+        }
     }
+    return "Invalid day";
 }
 
-console.log(getDayLoop(2));
+for (let j = 0; j < 7; j++) {
+    console.log(getDayLoop(j));
+}
